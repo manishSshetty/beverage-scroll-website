@@ -1,0 +1,39 @@
+let tl=gsap.timeline()
+tl.from(".front",{
+    y:1000,
+    duration:1
+})
+tl.from("#coffee",{
+    y:800,
+    duration:1,
+    scale:2
+})
+tl.from(".front h1",{
+    y:1000,
+    duration:1
+})
+tl.from("#coffeeBean1",{
+    y:800,
+    duration:1,
+    scale:2
+})
+tl.from("#coffeeBean2",{
+    y:800,
+    duration:1,
+    scale:2
+})
+tl.from("#coffeeBean3",{
+    y:800,
+    duration:1,
+    scale:2
+})
+tl.from("#coffeeBean4",{
+    y:800,
+    duration:1,
+    scale:2
+})
+tl.from("#coffeeBean5",{
+    y:800,
+    duration:1,
+    scale:2
+})
