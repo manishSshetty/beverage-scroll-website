@@ -38,60 +38,76 @@ tl.from("#coffeeBean5", {
   scale: 2,
 });
 
-let tl2 = gsap.timeline({
+let master = gsap.timeline({
   scrollTrigger: {
-    trigger: "#about",
+    trigger: "#coffeeWrapper", 
     scroller: "body",
     scrub: 2,
-    markers:true,
-    start:"0% 90%",
-    end:"50% 50%"
-  },
+    start:"top center",
+    end:"center top",
+  }
 });
 
-tl2.to("#coffee", {
+master.to("#coffee", {
   top: 615,
   left: 100,
-  scale:0.9
-},"cb");
+  scale: 0.9,
+}, "about")
 
-tl2.to("#coffeeBean1",{
+master.to("#coffeeBean1", {
   top: 601,
   left: 218,
-  scale:0.9,
-  rotate:142
-},"cb")
+  scale: 0.9,
+  rotate: 142
+}, "about")
 
-let tl3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#menu",
-    scroller: "body",
-    scrub: 2,
-    markers:true,
-    start:"0% 90%",
-    end:"50% 50%"
-  },
-});
-
-tl3.to("#coffee", {
+master.to("#coffee", {
   top: 1204,
   left: 525,
-  scale:0.9
-,},"cb");
+  scale: 0.9,
+}, "menu")
 
-tl3.to("#coffeeBean1",{
+master.to("#coffeeBean1", {
   top: 1192,
   left: 415,
-  scale:0.9,
-  rotate:211
-},"cb")
+  scale: 0.9,
+  rotate: 211
+}, "menu")
 
-tl3.from("#coffee1",{
-  x:-300,
-  duration:1,
-},"cb")
+master.from("#coffee1", { 
+  x: -300, 
+  duration: 1 
+}, "menu")
+master.from("#coffee2", { 
+  x: 300, 
+  duration: 1 
+}, "menu");
+ 
+master.to("#coffee", {
+  top: 1838,
+  left: 786,
+  scale: 0.9,
+  zIndex:10
+}, "contact")
 
-tl3.from("#coffee2",{
-  x:300,
-  duration:1,
-},"cb")
+master.to("#coffeeBean1", {
+  top: 1815,
+  left: 728,
+  scale: 0.9,
+  rotate: 133
+}, "contact")
+
+master.to("#coffee1", {
+  top: 686,
+  left: 556,
+  scale: 1,
+  rotate: -14
+}, "contact")
+
+master.to("#coffee2", {
+  top: 650,
+  left: 985,
+  scale: 1  ,
+  rotate: 14,
+}, "contact")
+
